@@ -25,11 +25,11 @@ class Role:
     def _outputCards(self):
         """Output hand cards"""
         count = len(self.handCards)
-        img = np.zeros((150, 80+25*count, 3), np.uint8)
+        img = np.zeros((150, 80 + 25 * count, 3), np.uint8)
         for i in range(count):
             img0 = cv2.imread("./pukeImage/{}.jpg".format(self.handCards[i]))
-            img[0:150, i*25:i*25+105] = img0
-        #deprecated
+            img[0:150, i * 25:i * 25 + 105] = img0
+        # deprecated
         # img = cv2.imread("./pukeImage/" + str(self.handCards[0]) + ".jpg")
         # for i in range(1, len(self.handCards)):
         #     img = cv2.hconcat([img, cv2.imread("./pukeImage/" + str(self.handCards[i]) + ".jpg")])
